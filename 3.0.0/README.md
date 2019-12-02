@@ -38,10 +38,13 @@ productionUrl: http://petstore.swagger.io/v2
 
 ## 4.MicroGateway ##
 `micro-gw init petstore`
+
 `cp ../petstore-oas-1.0.3.yaml petstore/api_definitions`
+
 `micro-gw build petstore`
 
 `cd /Users/.../microgateway/bin`
+
 `./gateway /Users/.../mgw-workspace/petstore/target/petstore.balx`
 
 OR

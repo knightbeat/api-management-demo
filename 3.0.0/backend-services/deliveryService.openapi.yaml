@@ -39,31 +39,64 @@ paths:
       operationId: operation1_updateBillingAddress
       requestBody:
         content:
-          '*/*':
+          application/json:
             schema:
-              $ref: '#/components/schemas/Request'
+              $ref: '#/components/schemas/Address'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Address'
         required: false
       responses:
         200:
           description: Successful
           content:
             application/json:
-              example: Ok
+              schema:
+                $ref: '#/components/schemas/Address'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Address'
     post:
       operationId: operation1_createBillingAddress
       requestBody:
         content:
-          '*/*':
+          application/json:
             schema:
-              $ref: '#/components/schemas/Request'
+              $ref: '#/components/schemas/Address'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Address'
         required: false
       responses:
         200:
           description: Successful
           content:
             application/json:
-              example: Ok
+              schema:
+                $ref: '#/components/schemas/Address'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Address'
 components:
   schemas:
-    Request:
+    Address:
       type: object
+      properties:
+        houseNumber:
+          type: integer
+          format: int64
+          description: The House Number
+        street:
+          type: string
+          description: The Street details of the Address
+        postCode:
+          type: string
+          description: The postCode of the Address
+        city:
+          type: string
+          description: The city of the Address
+        key:
+          type: string
+          description: A key to put the address in to a map (eg. 0005)
+      xml:
+        name: Address
