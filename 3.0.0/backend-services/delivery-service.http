@@ -1,0 +1,36 @@
+GET http://localhost:9098/deliveries/addresses/0004
+
+###
+POST http://localhost:9098/deliveries/addresses
+
+{
+  "houseNumber": 19,
+  "street": "Midland Road",
+  "postCode": "NN8 1NF",
+  "city": "Wellingborough",
+  "key":"0005"
+}
+
+###
+GET http://localhost:9098/deliveries/addresses/0005
+
+###
+
+PUT http://localhost:9098/deliveries/addresses
+
+{
+  "houseNumber": 19,
+  "street": "157A Midland Road",
+  "postCode": "NN8 1NF",
+  "city": "Wellingborough",
+  "key":"0005"
+}
+
+###
+GET http://localhost:9098/deliveries/addresses/0005
+
+###
+DELETE http://localhost:9098/deliveries/addresses/0005
+
+###
+GET http://localhost:9098/deliveries/addresses/0005

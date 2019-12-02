@@ -1,0 +1,69 @@
+openapi: 3.0.1
+info:
+  title: deliveryService
+  version: 1.0.0
+servers:
+- url: //localhost:9098/deliveries
+paths:
+  /addresses/{key}:
+    get:
+      operationId: operation1_getBillingAddress
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              example: Ok
+    delete:
+      operationId: operation1_deleteBillingAddress
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              example: Ok
+  /addresses:
+    put:
+      operationId: operation1_updateBillingAddress
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/Request'
+        required: false
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              example: Ok
+    post:
+      operationId: operation1_createBillingAddress
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/Request'
+        required: false
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              example: Ok
+components:
+  schemas:
+    Request:
+      type: object
