@@ -41,11 +41,11 @@ productionUrl: http://petstore.swagger.io/v2
 `cp ../petstore-oas-1.0.3.yaml petstore/api_definitions`
 `micro-gw build petstore`
 
-`cd /Users/ck/events/frusrgrpmeetup/microgateway/bin`
-`./gateway /Users/ck/events/frusrgrpmeetup/mgw-workspace/petstore/target/petstore.balx`
+`cd /Users/.../microgateway/bin`
+`./gateway /Users/.../mgw-workspace/petstore/target/petstore.balx`
 
 OR
 
-`docker run -d -v /Users/ck/events/frusrgrpmeetup/mgw-workspace/petstore/target/:/home/exec/ -p 9095:9095 -p 9090:9090 -e project="petstore"  wso2/wso2micro-gw:latest`
+`docker run -d -v /Users/.../mgw-workspace/petstore/target/:/home/exec/ -p 9095:9095 -p 9090:9090 -e project="petstore"  wso2/wso2micro-gw:latest`
 
 ## 5.API Product concept ##
