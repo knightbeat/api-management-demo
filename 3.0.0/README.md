@@ -18,7 +18,35 @@ POST
 GET 0004
 
 ## 2.GraphSQL Schema ##
-`twitter.graphql`
+`countries-api-schema.graphql`
+
+API Name = `CountriesDataAPI`
+context = `/countries`
+version = `1.0.0`
+Backend URL `https://countries.trevorblades.com/`
+
+Try POST `https://localhost:8243/countries/1.0.0` with API-M
+
+```
+{
+    continent(code:"EU")
+    {
+        code 
+        name 
+        countries
+        {
+            code 
+            name
+            languages
+            {
+                code
+                name
+            }
+        }
+    }
+}
+```
+
 
 ## 3.Import API using apictl ##
 
