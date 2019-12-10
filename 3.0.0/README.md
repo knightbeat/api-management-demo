@@ -15,7 +15,7 @@ POST
   "key":"0005"
 }
 ```
-GET 0004
+GET (http://localhost:8280/deliveries/1.0.0/addresses/0001)
 
 ## 2.GraphSQL Schema ##
 `countries-api-schema.graphql`
